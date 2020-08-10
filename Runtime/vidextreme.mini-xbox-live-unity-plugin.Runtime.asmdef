@@ -2,6 +2,7 @@
     "name": "com.vidextreme.mini-xbox-live-unity-plugin",
     "references": [],
     "includePlatforms": [
+        "Editor",
         "WSA",
         "WindowsStandalone32",
         "WindowsStandalone64",
