@@ -1,4 +1,7 @@
-﻿using Microsoft.Xbox.Services;
+﻿// Copyright (c) John David Bonifacio Uy
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+// 
+using Microsoft.Xbox.Services;
 using Microsoft.Xbox.Services.Statistics.Manager;
 using System;
 using System.Collections;

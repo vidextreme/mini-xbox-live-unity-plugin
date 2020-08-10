@@ -1,4 +1,4 @@
-﻿// Copyright (c) Microsoft Corporation
+﻿// Copyright (c) John David Bonifacio Uy
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 //Values taken from https://docs.microsoft.com/en-us/uwp/api/windows.gaming.xboxlive.storage.gamesaveerrorstatus?view=winrt-19041
