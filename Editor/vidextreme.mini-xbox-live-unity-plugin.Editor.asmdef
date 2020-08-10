@@ -1,5 +1,5 @@
 {
-    "name": "NewAssembly",
+    "name": "vidextreme.mini-xbox-live-unity-plugin.Editor",
     "references": [],
     "includePlatforms": [
         "Editor"

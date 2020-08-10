@@ -1,5 +1,5 @@
 {
-    "name": "com.vidextreme.mini-xbox-live-unity-plugin",
+    "name": "vidextreme.mini-xbox-live-unity-plugin.Runtime",
     "references": [],
     "includePlatforms": [
         "WSA",
