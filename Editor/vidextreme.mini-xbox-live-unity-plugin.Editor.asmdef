@@ -1,20 +1,15 @@
 {
-    "name": "com.vidextreme.mini-xbox-live-unity-plugin",
+    "name": "NewAssembly",
     "references": [],
     "includePlatforms": [
-        "WSA",
-        "WindowsStandalone32",
-        "WindowsStandalone64",
-        "XboxOne"
+        "Editor"
     ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,
-    "defineConstraints": [
-        "ENABLE_WINMD_SUPPORT"
-    ],
+    "defineConstraints": [],
     "versionDefines": [],
     "noEngineReferences": false
 }
