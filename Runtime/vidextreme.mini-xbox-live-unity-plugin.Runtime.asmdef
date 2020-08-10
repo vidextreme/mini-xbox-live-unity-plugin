@@ -2,6 +2,7 @@
     "name": "vidextreme.mini-xbox-live-unity-plugin.Runtime",
     "references": [],
     "includePlatforms": [
+        "Editor",
         "WSA",
         "WindowsStandalone32",
         "WindowsStandalone64",
@@ -12,9 +13,7 @@
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,
-    "defineConstraints": [
-        "ENABLE_WINMD_SUPPORT"
-    ],
+    "defineConstraints": [],
     "versionDefines": [],
     "noEngineReferences": false
 }

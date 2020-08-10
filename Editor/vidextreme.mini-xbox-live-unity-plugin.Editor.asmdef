@@ -2,12 +2,18 @@
     "name": "vidextreme.mini-xbox-live-unity-plugin.Editor",
     "references": [],
     "includePlatforms": [
-        "Editor"
+        "Editor",
+        "WSA",
+        "WindowsStandalone32",
+        "WindowsStandalone64",
+        "XboxOne"
     ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Microsoft.Xbox.Services.UnityEditor.CSharp.dll"
+    ],
     "autoReferenced": true,
     "defineConstraints": [],
     "versionDefines": [],
