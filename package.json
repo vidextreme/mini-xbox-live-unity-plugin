@@ -5,7 +5,7 @@
   "description": "A refactored plugin from https://github.com/microsoft/xbox-live-unity-plugin that has been simplified.",
   "unity": "2019.4",
   "unityRelease": "0b1",
- "keywords": [
+	"keywords": [
     "xbox",
     "mini",
     "live"
@@ -13,5 +13,10 @@
   "author": {
     "name": "vidextreme",
     "url": "https://github.com/vidextreme/mini-xbox-live-unity-plugin"
-  }
+  },
+  "repository":{
+	"type":"git",
+	"url":"https://github.com/vidextreme/mini-xbox-live-unity-plugin.git",
+	"revision": "HEAD"
+	}
 }
