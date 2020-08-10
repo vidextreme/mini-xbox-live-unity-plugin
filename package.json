@@ -1,6 +1,6 @@
 {
   "name": "com.vidextreme.mini-xbox-live-unity-plugin",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "displayName": "mini Xbox Live Unity Plugin",
   "description": "A refactored plugin from https://github.com/microsoft/xbox-live-unity-plugin that has been simplified.",
   "unity": "2019.4",
