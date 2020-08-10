@@ -36,6 +36,14 @@ public abstract class XboxLiveGameSaveContainer<T> where T : class
             yield return f.Name;
         }
     }
+    protected virtual KeyValuePair<string, byte[]>? _ProcessValue(string fieldName)
+    {
+        return null;
+    }
+    protected virtual object _ConvertValue(Type type, byte[] buff)
+    {
+        return null;
+    }
     protected virtual IEnumerable<KeyValuePair<string, byte[]>> SerializeData()
     {
         Type type = typeof(T);
@@ -54,7 +62,26 @@ public abstract class XboxLiveGameSaveContainer<T> where T : class
             }
             else
             {
-                XboxLiveUserManager.Log(XboxLiveLogType.Warning, string.Format("{0} with type {1} is not supported.", name, ft));
+                byte[] buff = null;
+                if (ft == typeof(Quaternion)) buff = ((Quaternion)obj).ToByteArray();
+                else if (ft == typeof(Vector4)) buff = ((Vector4)obj).ToByteArray();
+                else if (ft == typeof(Vector3)) buff = ((Vector3)obj).ToByteArray();
+                else if (ft == typeof(Vector2)) buff = ((Vector2)obj).ToByteArray();
+
+                if (buff != null)
+                {
+                    yield return new KeyValuePair<string, byte[]>(name, buff);
+                }
+                else
+                {
+                    var v = _ProcessValue(name);
+                    if (v != null && v.HasValue)
+                    {
+                        yield return v.Value;
+                    }
+                    else
+                        XboxLiveUserManager.Log(XboxLiveLogType.Warning, string.Format("{0} with type {1} is not supported.", name, ft));
+                }
             }
         }
     }
@@ -81,8 +108,15 @@ public abstract class XboxLiveGameSaveContainer<T> where T : class
                     else if (ft == typeof(double)) value = BitConverter.ToDouble(v.Value, 0);
                     else if (ft == typeof(float)) value = BitConverter.ToSingle(v.Value, 0);
                     else if (ft == typeof(bool)) value = BitConverter.ToBoolean(v.Value, 0);
-
-                    fi.SetValue(this, value);
+                    else if (ft == typeof(Quaternion)) value = v.Value.ToQuaternion();
+                    else if (ft == typeof(Vector4)) value = v.Value.ToVector4();
+                    else if (ft == typeof(Vector3)) value = v.Value.ToVector3();
+                    else if (ft == typeof(Vector2)) value = v.Value.ToVector2();
+                    else
+                    {
+                        value = _ConvertValue(ft, v.Value);
+                    }
+                    if(value != null) fi.SetValue(this, value);
                     XboxLiveUserManager.Log(XboxLiveLogType.Normal, "= " + value);
                 }
             }
