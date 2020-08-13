@@ -8,6 +8,7 @@ using System.IO;
 using Microsoft.Win32;
 using Microsoft.Xbox.Services;
 
+#if UNITY_EDITOR
 using UnityEditor;
 
 using UnityEngine;
@@ -308,3 +309,5 @@ public class XboxLiveConfigurationEditor : EditorWindow
         }
     }
 }
+
+#endif
