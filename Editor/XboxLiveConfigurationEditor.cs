@@ -8,7 +8,7 @@ using System.IO;
 using Microsoft.Win32;
 using Microsoft.Xbox.Services;
 
-#if UNITY_EDITOR
+#if UNITY_EDITOR && UNITY_WSA
 using UnityEditor;
 
 using UnityEngine;

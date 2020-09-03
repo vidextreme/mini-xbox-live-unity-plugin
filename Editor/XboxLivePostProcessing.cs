@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 // 
-#if UNITY_EDITOR
+#if UNITY_EDITOR && UNITY_WSA
 namespace Assets.Xbox_Live.Editor
 {
     using System;
