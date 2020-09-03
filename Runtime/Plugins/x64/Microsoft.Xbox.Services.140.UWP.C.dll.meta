@@ -1,17 +1,18 @@
 fileFormatVersion: 2
-guid: a42571bcf73d3fc4ab4946e08d031557
-timeCreated: 1511831675
-licenseType: Free
+guid: e2a27f0f25bae674f91b79c2de1adb82
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2
   iconMap: {}
   executionOrder: {}
+  defineConstraints: []
   isPreloaded: 0
   isOverridable: 0
+  isExplicitlyReferenced: 0
+  validateReferences: 1
   platformData:
   - first:
-      '': Any
+      : Any
     second:
       enabled: 0
       settings:
@@ -23,6 +24,7 @@ PluginImporter:
         Exclude OSXIntel: 0
         Exclude OSXIntel64: 0
         Exclude OSXUniversal: 0
+        Exclude WebGL: 1
         Exclude Win: 0
         Exclude Win64: 0
         Exclude WindowsStoreApps: 0
@@ -70,7 +72,7 @@ PluginImporter:
     second:
       enabled: 1
       settings:
-        CPU: x86_64
+        CPU: AnyCPU
   - first:
       Standalone: LinuxUniversal
     second:
@@ -113,9 +115,9 @@ PluginImporter:
       enabled: 1
       settings:
         CPU: X64
-        DontProcess: False
+        DontProcess: false
         PlaceholderPath: 
-        SDK: AnySDK
+        SDK: UWP
         ScriptingBackend: AnyScriptingBackend
   - first:
       iPhone: iOS
