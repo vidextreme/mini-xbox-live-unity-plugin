@@ -116,7 +116,7 @@ PluginImporter:
         CPU: AnyCPU
         DontProcess: false
         PlaceholderPath: 
-        SDK: AnySDK
+        SDK: UWP
         ScriptingBackend: AnyScriptingBackend
   - first:
       iPhone: iOS
