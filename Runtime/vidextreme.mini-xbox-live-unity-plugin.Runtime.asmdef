@@ -4,6 +4,7 @@
     "includePlatforms": [
         "Editor",
         "WSA",
+        "WebGL",
         "WindowsStandalone32",
         "WindowsStandalone64",
         "XboxOne"
